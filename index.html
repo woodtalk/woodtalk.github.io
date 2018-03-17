@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="wiki">
+{% assign index = site.wiki | where: "title", "Index" | first %}
+    <article class="post-content">
+        {{ index.content }}
+    </article>
+</div>
+
+<div id="rss">
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+</div>
+    
+{% comment %}
+<script type='text/javascript'>
+$('article.post-content').find('a').each(function() {
+    var currentHref = $(this).attr('href');
+    $(this).attr('href', '/wiki/' + currentHref);
+});
+</script>
+{% endcomment %}
