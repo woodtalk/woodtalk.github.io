@@ -28,7 +28,7 @@ git은 정말 좋은 녀석이므로 이 부분을 해결하였는데,
 
 `.gitattributes`에 다음을 넣어 커밋하자
 
-```
+```gitconfig
 *.sh text eol=lf
 ```
 
@@ -56,13 +56,13 @@ CORRECT_EMAIL="your-correct-email@example.com"
 
 if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
 then
-    export GIT_COMMITTER_NAME="$CORRECT_NAME"
-    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
+  export GIT_COMMITTER_NAME="$CORRECT_NAME"
+  export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"
 fi
 if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]
 then
-    export GIT_AUTHOR_NAME="$CORRECT_NAME"
-    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
+  export GIT_AUTHOR_NAME="$CORRECT_NAME"
+  export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"
 fi
 ' --tag-name-filter cat -- --branches --tags
 ```
@@ -71,7 +71,7 @@ fi
 
 ### git log alias(color highlight)
 
-```
+```bash
 git config --global alias.lg "log --pretty=format:'%C(auto)%h %ai %Creset%C(auto,bold blue)<%an>%Creset%C(auto) -%d %s %Creset%C(auto,green)(%cr)%Creset' --graph --all"
 ```
 
@@ -174,3 +174,70 @@ echo "$1 <$1@gmail.com>"
 
 HEAD는 꼭 대문자로
 
+### sparse checkout
+
+git으로 svn의 subdirectory checkout을 하고 싶었다.   
+정밀히는 안되지만 대충은 되는 방법이 있는데, git 버전이 올라가면 뭔가 되지 않을까 예상한다.   
+현재 버전(2.25)에서는 여기까지인 것 같다.
+
+`.git/config`에 다음과 같은 설정을 추가하자
+
+```gitconfig
+[core]
+  sparseCheckout = true
+  # 아래 것은 효율을 올리고 패턴을 포기하는 건데 걍 해놓자
+  sparseCheckoutCone = true
+```
+
+`.git/info/sparse-checkout`에 받을(혹은 제외할) path를 넣자
+
+```gitconfig
+/_wiki/
+!/*
+```
+
+이런식인데, 반쪽짜리이다.
+
+`sparse-checkout` 명령어도 따로 있는데 위의 과정을 자동으로 해주는 걸로   
+`init`, `set` 명령이 있다.(`disable`도 있다.)
+
+참고는 다음 사이트에서 했다.   
+[[https://www.lesstif.com/pages/viewpage.action?pageId=20776761]]   
+[[https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/]]
+
+### worktree
+
+현재(혹은 특정 commit이나 branch)를 기반으로 새폴더에 작업트리(worktree)를 생성할 수 있는 기능이 있다.   
+급한 상황 다른 작업 중에 현재 폴더는 그대로 나두고 hotfix를 뜨는 시나리오에서 사용할 만하다는데   
+우선 공부는 해놔서 기록으로 남겨 놓는다.
+
+개인적으로 cp를 스마트하게 한다는 점 외에 큰 장점을 못 느끼겠다.
+
+`list`, `add`, `remove` 등 명령어가 있다.
+
+worktree 별 config를 설정할 수도 있는데,
+
+`git config extensions.worktreeConfig true`   
+`git config --worktree {설정 값}`   
+이런 과정으로 사용할 수 있다.
+
+`.git/config` 다음과 같이 들어가고
+
+```gitconfig
+[extensions]
+  worktreeConfig = true
+```
+
+`.git/config.worktree` 파일이 생기고 다음과 같이 들어간다.
+
+```gitconfig
+[core]
+  sparseCheckout = true
+```
+
+worktree를 옮겨다니면서(cd 명령으로) 변경한 worktree에서 `git config --worktree`를 쓰면   
+그 worktree에만 설정이 적용되는데, 순서는 다음과 같다.
+
+`config.worktree` -> `.git/config`
+
+그런데 이 기능도 잘 활용될지는 모르겠고, 우선 공부해 봤으니 기록용으로 남긴다.
