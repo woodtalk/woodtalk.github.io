@@ -43,9 +43,13 @@ defaults:
     values:
       layout: "wiki"
 
-disqus:
-  id: woodtalk
-  shortname: woodtalk
+utterances:
+  repo: woodtalk/woodtalk.github.io
+  issue-term: pathname
+  label: Comment
+  branch: master
+  #theme: github-dark
+  theme: photon-dark
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
