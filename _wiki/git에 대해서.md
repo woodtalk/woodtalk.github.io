@@ -254,7 +254,7 @@ git difftool --no-prompt --tool vimdiff
 
 #### diff with gvim
 
-```batch
+```dos
 git difftool --no-prompt --extcmd="'C:\Program Files\Vim\vim82\gvim' -d --nofork"
 git difftool --no-prompt --tool gvimdiff
 ```
