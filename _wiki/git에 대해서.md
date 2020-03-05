@@ -241,3 +241,29 @@ worktree를 옮겨다니면서(cd 명령으로) 변경한 worktree에서 `git co
 `config.worktree` -> `.git/config`
 
 그런데 이 기능도 잘 활용될지는 모르겠고, 우선 공부해 봤으니 기록용으로 남긴다.
+
+### diff with vim
+
+```bash
+git difftool --no-prompt --tool vimdiff
+```
+
+```vim
+:diffupdate
+```
+
+#### diff with gvim
+
+```batch
+git difftool --no-prompt --extcmd="'C:\Program Files\Vim\vim82\gvim' -d --nofork"
+git difftool --no-prompt --tool gvimdiff
+```
+
+
+#### difftool and alias
+
+```bash
+git config --global diff.tool vimdiff
+git config --global difftool.prompt false
+git config --global alias.df difftool
+```

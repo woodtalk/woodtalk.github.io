@@ -32,6 +32,29 @@
 - `"{$character}p` : {$character}에 clipboard에 저장된 값 paste
 - 명령어 모드에서 `:reg`는 현재 등록(regist)된 모든 clipboard 값을 확인할 수 있음
 
+### command / search mode에서 붙여넣기 하고 싶을 때
+
+ctrl + r 다음에 클립보드 종류를 선택할 수 있는데,   
+아래와 같은 상태가 된다.
+
+```vim
+:"
+/"
+```
+
+다음과 같이 클립보드를 선택할 수 있다.
+
+- `0` ~ `9` : 대표적으로 0을 사용하며 최근에 yank 했던 내용(vim)
+- `"` : 이전 yank 했던 내용 - 이건 정확하지 않을 수 있음
+- `:` or `/` : 방금 command or search에서 사용했던 내용
+- `+` : **핵** **중요**. command mode나 search mode에서 외부(ctrl + c)에서 복사한 내용을 붙힐 때 사용
+
+### 이건 예전에 참고용으로 남기는 내용
+- visual mode에서 복사(y)한 내용을 search mode(/)에서 사용하는 방법은 ctrl + r + 0를 하면 된다.
+- ctrl + r에는 기타 다른 것도 사용할 수 있다. % # / : 등등
+- 기타 자세한 내용은 :help c_CTRL-R로 알 수 있다.
+  + 출처 : [[http://seorenn.blogspot.kr/2011/04/vim.html?m=1]]
+
 ## 만약에 binary로 파일을 보고 싶으면
 
 ```vim
@@ -143,10 +166,6 @@ q:
 
 - ctrl + v 를 할 경우 수평 선택이 가능하다.
 - I는 그 상태에서 입력 가능 입력한 후 esc를 누르면 수평 입력이 가능하다.
-- visual mode에서 복사(y)한 내용을 search mode(/)에서 사용하는 방법은 ctrl + r + 0를 하면 된다.
-- ctrl + r에는 기타 다른 것도 사용할 수 있다. % # / : 등등
-- 기타 자세한 내용은 :help c_CTRL-R로 알 수 있다.
-  + 출처 : [[http://seorenn.blogspot.kr/2011/04/vim.html?m=1]]
 
 ### 유용한 자료
 
