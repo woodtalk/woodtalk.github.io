@@ -267,3 +267,82 @@ git config --global diff.tool vimdiff
 git config --global difftool.prompt false
 git config --global alias.df difftool
 ```
+
+## git flow config 관련
+
+`git flow`를 쓰면 flow branch를 쉽게 관리할 수 있다.
+
+git flow의 최신 버전은 `1.12.3 (AVH Edition)` 이다(2020년 3월경)   
+해당 버전은 `finish`에서 merge하는 방식이 변경되었는데,   
+github의 토론 기록을 몇가지 봤는데 git-flow를 제안한 사람이 룰을 좀 독단적으로 바꾸는 경향이 있는 것 같다.   
+이 부분에 대한 내용은 이해한 대로 추후 기술하도록 하겠다.
+
+여튼 기존 방식으로 flow를 적용하려면 다음과 같은 옵션을 추가하면 된다.
+
+
+```gitconfig
+[gitflow "feature.finish"]
+	no-ff = true
+[gitflow "hotfix.finish"]
+	nobackmerge = true
+[gitflow "release.finish"]
+	nobackmerge = true
+```
+
+아니면 다음 명령을 실행해주면 된다.
+
+```bash
+git config --global gitflow.feature.finish.no-ff true
+git config --global gitflow.hotfix.finish.nobackmerge true
+git config --global gitflow.release.finish.nobackmerge true
+```
+
+### git-flow 제안자([nvie](https://github.com/nvie))의 의견?
+
+우선 영어가 짧은 관계로 해석에 오해가 있어 **잘못된 해석** 을 하였을 수 있으니   
+이점 참고하길 바람
+
+#### one commit feature branch
+
+- `--ff` merge로 진행해야한다고 판단
+- 하나 짜리 커밋를 merge할 경우 빈 merge 커밋이 생기는데, 불필요한 커밋 그래프 복잡성을 야기한다고 생각함
+- 때문에 default feature finish는 ff
+- 관련된 정보는 다음 링크를 참고 [[https://github.com/nvie/gitflow/issues/100#issuecomment-769968]]
+- avh 버전에서 project owner의 관련 코멘트 [[https://github.com/petervanderdoes/gitflow-avh/issues/140#issuecomment-68016681]]
+
+개인적으로 원 제안자의 의견이 좀 독단적인 부분이 있다고 생각함   
+코멘트 중 one commit feature branch를 ff로 merge하면   
+feature branch가 담고 있는 이름이라는 정보가 사라짐   
+나도 이 부분에 동의함
+
+#### finish hotfix merge
+
+- 참고 : [[https://github.com/nvie/gitflow/issues/49]]
+- 처음 이해한 gitflow의 흐름은
+  1. hotfix는 master에서 생성
+  2. 완료 시점에 hotfix는 develop, master로 각각 merge
+  3. hotfix 삭제
+- 변경된 버전은(혹은 avh 버전의 기본 동작 방식) - 이 코멘트 참고 [[https://github.com/nvie/gitflow/issues/49#issuecomment-588258121]]
+  1. hotfix는 master에서 생성 - 여기까지는 동일
+  2. 완료 시점에서 hotfix는 master에 merge
+  3. merge된 master를 develop에 merge
+  4. hotfix 삭제
+- 이유는 git-decribe에 친화적이지 않는 방식이라는데...
+
+내 생각은 원안의 gitflow 흐름이 더 낫다고 판단   
+git branch graph를 볼 때 의도가 더 명확하다고 생각함   
+개인적으로 변경된 버전에서의 이점은 만일 master에만 적용된 commit이 있을 경우   
+hotfix 종료 시 develop에 product에 변경된 사항이 적용되므로   
+이 경우를 생각하면 타당한 변경이라고 생각하는데,   
+히스토리를 찾아보니 좀 뭔가 이유가 설득력이 없다고 생각됨
+
+#### 정리
+
+개인적으로 원 제안자의 처음 제안한 안이 더 괜찮다고 생각함   
+그리고 원 제안자의 추후 gitflow의 룰을 변경한 부분은 한번에 찾기 어려우며   
+버저닝되지도 않았음   
+또한 git flow라는 툴은 업데이트가 안되어 있음   
+현재는 avh라는 이름이 정식 버전으로 취급되고 있음   
+하지만 avh 버전도 legacy라는 명목으로 기본은 원 제작자의 변경한 룰(어디에서도 설명이 명확하게 없는)을 기본으로 잡음   
+[[#git flow config 관련]] 을 참고하면 원안 룰 방식의 git-flow를 사용할 수 있음
+
