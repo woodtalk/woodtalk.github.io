@@ -259,7 +259,6 @@ git difftool --no-prompt --extcmd="'C:\Program Files\Vim\vim82\gvim' -d --nofork
 git difftool --no-prompt --tool gvimdiff
 ```
 
-
 #### difftool and alias
 
 ```bash
@@ -267,6 +266,28 @@ git config --global diff.tool vimdiff
 git config --global difftool.prompt false
 git config --global alias.df difftool
 ```
+
+### merge conflict with vim
+
+```bash
+git config --global merge.tool vimdiff
+git config --global merge.conflictstyle diff3
+git config --global mergetool.prompt false
+```
+
+```bash
+git mergetool
+```
+
+```vimconfig
+:diffget remote
+
+:diffg RE  " get from REMOTE
+:diffg BA  " get from BASE
+:diffg LO  " get from LOCAL
+```
+
+[출처](https://www.rosipov.com/blog/use-vimdiff-as-git-mergetool/)
 
 ## git flow config 관련
 
@@ -278,7 +299,6 @@ github의 토론 기록을 몇가지 봤는데 git-flow를 제안한 사람이 �
 이 부분에 대한 내용은 이해한 대로 추후 기술하도록 하겠다.
 
 여튼 기존 방식으로 flow를 적용하려면 다음과 같은 옵션을 추가하면 된다.
-
 
 ```gitconfig
 [gitflow "feature.finish"]
