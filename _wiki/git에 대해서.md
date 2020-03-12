@@ -72,7 +72,7 @@ fi
 ### git log alias(color highlight)
 
 ```bash
-git config --global alias.lg "log --pretty=format:'%C(auto)%h %ai %Creset%C(auto,bold blue)<%an>%Creset%C(auto) -%d %s %Creset%C(auto,green)(%cr)%Creset' --graph --all"
+git config --global alias.lg "log --pretty=format:'%C(auto)%h %ai %Creset%C(auto,bold blue)<%an>%Creset%C(auto) -%d %s %Creset%C(auto,green)(%cr)%Creset' --graph --decorate --all"
 ```
 
 - `--stat` : 변경 파일 목록 표기
@@ -85,6 +85,13 @@ git config --global alias.lg "log --pretty=format:'%C(auto)%h %ai %Creset%C(auto
 
 ```bash
 --word-diff
+```
+
+### 기타 추가하면 편한 alias
+
+```bash
+git config --global alias.s "status -s"
+git config --global alias.df difftool
 ```
 
 ## git-svn
@@ -264,7 +271,6 @@ git difftool --no-prompt --tool gvimdiff
 ```bash
 git config --global diff.tool vimdiff
 git config --global difftool.prompt false
-git config --global alias.df difftool
 ```
 
 ### merge conflict with vim
