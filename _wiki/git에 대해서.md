@@ -94,6 +94,10 @@ git config --global alias.s "status -s"
 git config --global alias.df difftool
 ```
 
+### vimdiff 단축키
+
+[[vim에 대해서]] 의 vimdiff 단축키 참고
+
 ## git-svn
 
 git-svn은 svn을 쓰는 프로젝트에 꿈과 같은 명령어라고 할 수 있다.   
