@@ -2,6 +2,6 @@
 ---
 # test jekyll drawio
 
-![Alt](images/test.svg)
+![Alt](/images/test.svg)
 
 ## test2
