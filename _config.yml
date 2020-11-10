@@ -25,7 +25,8 @@ github_username: woodtalk
 markdown: kramdown
 #remote_theme: mattgraham/midnight
 theme: jekyll-theme-midnight
-#plugins:
+plugins:
+  - jekyll-drawio
 
 permalink: /blog/:year/:month/:day/:title
 
