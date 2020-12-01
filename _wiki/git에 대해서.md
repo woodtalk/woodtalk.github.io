@@ -67,7 +67,7 @@ fi
 ' --tag-name-filter cat -- --branches --tags
 ```
 
-참고 [[https://help.github.com/en/articles/changing-author-info]]
+참고 <https://help.github.com/en/articles/changing-author-info>
 
 ### git log alias(color highlight)
 
@@ -79,7 +79,7 @@ git config --global alias.lg "log --pretty=format:'%C(auto)%h %ai %Creset%C(auto
 - `-p` : 파일 변경 diff까지 보기
 - `-{숫자}`(`-2`) : log 목록 제한
 
-참고 [[https://coderwall.com/p/euwpig/a-better-git-log]]
+참고 <https://coderwall.com/p/euwpig/a-better-git-log>
 
 #### git diff(log -p 옵션에서도 사용가능)에서 유용한 옵션
 
@@ -152,7 +152,7 @@ git 프로젝트?에 로컬적인 각종 설정파일
 ```
 
 특히 branches의 **규칙** 은 공식 홈페이지에서도 자세히 다룬다.   
-[[https://git-scm.com/docs/git-svn]] 에 CONFIGURATION 항목에 보면 언급되니 참고
+<https://git-scm.com/docs/git-svn> 에 CONFIGURATION 항목에 보면 언급되니 참고
 
 ### git-svn으로 커밋들 땡겨올 때 author의 email 주소가 hashing이 붙어서 시무륵
 
@@ -213,8 +213,8 @@ git으로 svn의 subdirectory checkout을 하고 싶었다.
 `init`, `set` 명령이 있다.(`disable`도 있다.)
 
 참고는 다음 사이트에서 했다.   
-[[https://www.lesstif.com/pages/viewpage.action?pageId=20776761]]   
-[[https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/]]
+<https://www.lesstif.com/pages/viewpage.action?pageId=20776761>   
+<https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/>
 
 ### worktree
 
@@ -337,8 +337,8 @@ git config --global gitflow.release.finish.nobackmerge true
 - `--ff` merge로 진행해야한다고 판단
 - 하나 짜리 커밋를 merge할 경우 빈 merge 커밋이 생기는데, 불필요한 커밋 그래프 복잡성을 야기한다고 생각함
 - 때문에 default feature finish는 ff
-- 관련된 정보는 다음 링크를 참고 [[https://github.com/nvie/gitflow/issues/100#issuecomment-769968]]
-- avh 버전에서 project owner의 관련 코멘트 [[https://github.com/petervanderdoes/gitflow-avh/issues/140#issuecomment-68016681]]
+- 관련된 정보는 다음 링크를 참고 <https://github.com/nvie/gitflow/issues/100#issuecomment-769968>
+- avh 버전에서 project owner의 관련 코멘트 <https://github.com/petervanderdoes/gitflow-avh/issues/140#issuecomment-68016681>
 
 개인적으로 원 제안자의 의견이 좀 독단적인 부분이 있다고 생각함   
 코멘트 중 one commit feature branch를 ff로 merge하면   
@@ -347,12 +347,12 @@ feature branch가 담고 있는 이름이라는 정보가 사라짐
 
 #### finish hotfix merge
 
-- 참고 : [[https://github.com/nvie/gitflow/issues/49]]
+- 참고 : <https://github.com/nvie/gitflow/issues/49>
 - 처음 이해한 gitflow의 흐름은
   1. hotfix는 master에서 생성
   2. 완료 시점에 hotfix는 develop, master로 각각 merge
   3. hotfix 삭제
-- 변경된 버전은(혹은 avh 버전의 기본 동작 방식) - 이 코멘트 참고 [[https://github.com/nvie/gitflow/issues/49#issuecomment-588258121]]
+- 변경된 버전은(혹은 avh 버전의 기본 동작 방식) - 이 코멘트 참고 <https://github.com/nvie/gitflow/issues/49#issuecomment-588258121>
   1. hotfix는 master에서 생성 - 여기까지는 동일
   2. 완료 시점에서 hotfix는 master에 merge
   3. merge된 master를 develop에 merge

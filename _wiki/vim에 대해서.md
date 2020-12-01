@@ -53,7 +53,7 @@ ctrl + r 다음에 클립보드 종류를 선택할 수 있는데,
 - visual mode에서 복사(y)한 내용을 search mode(/)에서 사용하는 방법은 ctrl + r + 0를 하면 된다.
 - ctrl + r에는 기타 다른 것도 사용할 수 있다. % # / : 등등
 - 기타 자세한 내용은 :help c_CTRL-R로 알 수 있다.
-  + 출처 : [[http://seorenn.blogspot.kr/2011/04/vim.html?m=1]]
+  + 출처 : <http://seorenn.blogspot.kr/2011/04/vim.html?m=1>
 
 ## 만약에 binary로 파일을 보고 싶으면
 
@@ -67,7 +67,7 @@ ctrl + r 다음에 클립보드 종류를 선택할 수 있는데,
 :%!xxd -r
 ```
 
-추가로 `setlocal binary`나 `setlcoal diplay=uhex` , `setlocal wrap` 기타 등등이 있는데 자세한 건 [[http://vim.wikia.com/wiki/Hex_dump]] 참조
+추가로 `setlocal binary`나 `setlcoal diplay=uhex` , `setlocal wrap` 기타 등등이 있는데 자세한 건 <http://vim.wikia.com/wiki/Hex_dump> 참조
 
 ## 인코딩이 변경하고 싶다
 
@@ -135,7 +135,7 @@ set fileencoings
 - 매크로를 저장 했으면 매크로를 실행하려고 하는 위치에 커서를 잘 놓고 `@[매크로 명]`을 누르면 된다.
   + `qa`로 저장했다면 `@a`
 - 매크로를 여러번 실행하고 싶으면 `[횟수]@[매크로 명]`같이 입력해 주면 됨
-- [[http://forcecore.tistory.com/1255]] 는 매크로를 아예 저장하는 방법이 있네
+- <http://forcecore.tistory.com/1255> 는 매크로를 아예 저장하는 방법이 있네
 
 ## 대소문자 관련해서
 
@@ -185,6 +185,6 @@ q:
 
 ### 유용한 자료
 
-- vim에 대한 책이 있네요 - [[https://blog.insightbook.co.kr/2011/03/29/%ec%bd%94%eb%94%a9%ec%9d%84-%ec%97%b0%ec%a3%bc%ed%95%98%eb%93%af-vim%ec%9d%84-%eb%b0%b0%ec%9b%8c%eb%b3%b4%ec%84%b8%ec%9a%94/]]
-- 그 중 마음에 드는 이미지 [[https://insightbookblog.files.wordpress.com/2019/02/cfile21.uf_.15118c3f4d8c3a8f3b8f76.jpg]]
-  + 원본 [[https://bitbucket.org/tednaleid/vim-shortcut-wallpaper/src/default/]]
+- vim에 대한 책이 있네요 - <https://blog.insightbook.co.kr/2011/03/29/%ec%bd%94%eb%94%a9%ec%9d%84-%ec%97%b0%ec%a3%bc%ed%95%98%eb%93%af-vim%ec%9d%84-%eb%b0%b0%ec%9b%8c%eb%b3%b4%ec%84%b8%ec%9a%94/>
+- 그 중 마음에 드는 이미지 <https://insightbookblog.files.wordpress.com/2019/02/cfile21.uf_.15118c3f4d8c3a8f3b8f76.jpg>
+  + 원본 <https://bitbucket.org/tednaleid/vim-shortcut-wallpaper/src/default/>
