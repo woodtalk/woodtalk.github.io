@@ -303,9 +303,9 @@ git mergetool
 
 `git flow` 를 쓰면 flow branch를 쉽게 관리할 수 있다.
 
-git flow의 최신 버전은 `1.12.3 (AVH Edition)` 이다(2020년 3월경)   
-해당 버전은 `finish` 에서 merge하는 방식이 변경되었는데,   
-github의 토론 기록을 몇가지 봤는데 git-flow를 제안한 사람이 룰을 좀 독단적으로 바꾸는 경향이 있는 것 같다.   
+git flow 의 최신 버전은 `1.12.3 (AVH Edition)` 이다(2020년 3월경)   
+해당 버전은 `finish` 에서 merge 하는 방식이 변경되었는데,   
+github의 토론 기록을 몇가지 봤는데 git-flow 를 제안한 사람이 룰을 좀 독단적으로 바꾸는 경향이 있는 것 같다.   
 이 부분에 대한 내용은 이해한 대로 추후 기술하도록 하겠다.
 
 여튼 기존 방식으로 flow 를 적용하려면 다음과 같은 옵션을 추가하면 된다.
@@ -348,7 +348,7 @@ feature branch 가 담고 있는 이름이라는 정보가 사라짐
 #### finish hotfix merge
 
 - 참고 : <https://github.com/nvie/gitflow/issues/49>
-- 처음 이해한 gitflow 의 흐름은
+- 처음 이해한 git-flow 의 흐름은
   1. hotfix 는 master 에서 생성
   2. 완료 시점에 hotfix 는 develop, master 로 각각 merge
   3. hotfix 삭제
@@ -359,7 +359,7 @@ feature branch 가 담고 있는 이름이라는 정보가 사라짐
   4. hotfix 삭제
 - 이유는 git-describe 에 친화적이지 않는 방식이라는데...
 
-내 생각은 원안의 gitflow 흐름이 더 낫다고 판단   
+내 생각은 원안의 git-flow 흐름이 더 낫다고 판단   
 git branch graph 를 볼 때 의도가 더 명확하다고 생각함   
 개인적으로 변경된 버전에서의 이점은 만일 master 에만 적용된 commit 이 있을 경우   
 hotfix 종료 시 develop 에 product 에 변경된 사항이 적용되므로   
@@ -373,5 +373,5 @@ hotfix 종료 시 develop 에 product 에 변경된 사항이 적용되므로
 버저닝되지도 않았음   
 또한 git flow 라는 툴은 업데이트가 안되어 있음   
 현재는 avh 라는 이름이 정식 버전으로 취급되고 있음   
-하지만 avh 버전도 legacy라는 명목으로 기본은 원 제작자의 변경한 룰(어디에서도 설명이 명확하게 없는)을 기본으로 잡음   
+하지만 avh 버전도 legacy 라는 명목으로 기본은 원 제작자의 변경한 룰(어디에서도 설명이 명확하게 없는)을 기본으로 잡음   
 [#git flow config 관련](#git flow config 관련) 을 참고하면 원안 룰 방식의 git-flow를 사용할 수 있음
