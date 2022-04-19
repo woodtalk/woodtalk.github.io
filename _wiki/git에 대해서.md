@@ -374,4 +374,4 @@ hotfix 종료 시 develop 에 product 에 변경된 사항이 적용되므로
 또한 git flow 라는 툴은 업데이트가 안되어 있음   
 현재는 avh 라는 이름이 정식 버전으로 취급되고 있음   
 하지만 avh 버전도 legacy 라는 명목으로 기본은 원 제작자의 변경한 룰(어디에서도 설명이 명확하게 없는)을 기본으로 잡음   
-[#git flow config 관련](#git flow config 관련) 을 참고하면 원안 룰 방식의 git-flow를 사용할 수 있음
+[#git flow config 관련](#git-flow-config-관련) 을 참고하면 원안 룰 방식의 git-flow를 사용할 수 있음
