@@ -16,28 +16,34 @@
 title: woodtalk's 잡지식
 email: woodtalk@daum.net
 #description: >- # this means to ignore newlines until "baseurl:"
-# 개발용 
+# 개발용
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://woodtalk.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: woodtalk
 
 # Build settings
-markdown: kramdown
+#markdown: kramdown
 #remote_theme: mattgraham/midnight
 theme: jekyll-theme-midnight
 #plugins:
+#  - jekyll-relative-links
 
-permalink: /blog/:year/:month/:day/:title
+#permalink: /blog/:year/:month/:day/:title
+#permalink: pretty
 
 # Collections
 collections:
   wiki:
     output: true
     permalink: /:collection/:path/
+    #permalink: pretty
+
+#relative_links:
+#  enabled: true
+#  collections: true
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""  # all in collection
       type: "wiki"
     values:

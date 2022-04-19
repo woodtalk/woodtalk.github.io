@@ -1,6 +1,5 @@
 ---
 layout: default
-permalink: /wiki/
 ---
 
 <div class="wiki">
@@ -10,6 +9,13 @@ permalink: /wiki/
     </article>
 </div>
 
-{% if false %}
+{% comment %}
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-{% endif %}
+{% endcomment %}
+
+<script type='text/javascript'>
+$('a').each(function(){
+    var currentHref = $(this).attr('href');
+    $(this).attr('href', '/wiki/' + currentHref);
+});
+</script>
