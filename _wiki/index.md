@@ -1,5 +1,4 @@
 ---
-permalink: /wiki/
 comment: false
 ---
 # [git에 대해서](git에-대해서)
