@@ -25,8 +25,8 @@ github_username: woodtalk
 #markdown: kramdown
 #remote_theme: mattgraham/midnight
 theme: jekyll-theme-midnight
-#plugins:
-#  - jekyll-relative-links
+plugins:
+  - jekyll-relative-links
 
 #permalink: /blog/:year/:month/:day/:title
 #permalink: pretty
@@ -38,9 +38,12 @@ collections:
     permalink: /:collection/:path/
     #permalink: pretty
 
-#relative_links:
-#  enabled: true
-#  collections: true
+relative_links:
+  enabled: true
+  collections: true
+  exclude:
+    - index.html
+    - index.md
 
 defaults:
   - scope:
