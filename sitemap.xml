@@ -7,7 +7,7 @@ layout: null
   {% for page in pages %}
     {% if page.url == '/wiki/index/' or page.url == '/wiki/index' %}
       {% continue %}
-    {$ endif %}
+    {% endif %}
     <url>
       <loc>{{ site.url }}/{{ page.url | split: '/' | join: '/' | remove: 'index.html' }}</loc>
     {% if page.sitemap.lastmod %}
