@@ -14,7 +14,7 @@ layout: default
 {% endcomment %}
 
 <script type='text/javascript'>
-$('a').each(function(){
+$('article.post-content').find('a').each(function() {
     var currentHref = $(this).attr('href');
     $(this).attr('href', '/wiki/' + currentHref);
 });
