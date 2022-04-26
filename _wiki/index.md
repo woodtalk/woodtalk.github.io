@@ -8,6 +8,3 @@ comment: false
 # [스터디](스터디/index.md)
 # [jekyll-testing](jekyll-testing/index.md)
 # [네트워크 모델 공부](네트워크-모델-공부.md)
-# [빅데이터 공부](빅데이터-공부.md)
-# [oltp olap](oltp-olap.md)
-# [jekyll-drawio-test2](jekyll-drawio-test2.md)
