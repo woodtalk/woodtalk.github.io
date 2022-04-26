@@ -8,9 +8,9 @@ comment: false
 
 ---
 
-# [스터디](스터디/index.md)
+# [스터디](스터디)
 ## [네트워크 모델 공부](네트워크-모델-공부.md)
 
 ---
 
-# [jekyll-testing](jekyll-testing/index.md)
+# [jekyll-testing](jekyll-testing)
