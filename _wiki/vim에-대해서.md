@@ -2,13 +2,13 @@
 ---
 # vi 단축키 관련
 
-## insert mode에서...
+## insert mode 에서...
 
-- `ctrl` + `[` 은 esc
-- `ctrl` + `h` 은 backspace
-- `ctrl` + `w` 은 이전 단어 지우기
+- `ctrl` + `[` : esc
+- `ctrl` + `h` : backspace
+- `ctrl` + `w` : 이전 단어 지우기
 
-## 그냥 모드에서 insert mode로 전환하는 다양한 방법
+## 그냥 모드에서 insert mode 로 전환하는 다양한 방법
 
 - `i` : 현재 커서에서 insert
 - `a` : 현재 커서 다음 글자에서 insert
@@ -19,7 +19,7 @@
 
 ## 빨리 이동하기 위한 팁
 
-- `f` `<문자>` : 문자의 위치로 이동 ; 를 누르면 계속 이동
+- `f` `<문자>` : 문자의 위치로 이동 `;` 를 누르면 계속 이동
 - `F` `<문자>` : 백워드로 문자의 위치로 이동
 - `e` or `w` : 단어 단위 앞으로 이동
 - `b` : 단어 단위 뒤로 이동
@@ -30,9 +30,9 @@
 
 - `"{$character}y` : {$character} 에 clipboard 에 저장함
 - `"{$character}p` : {$character} 에 clipboard 에 저장된 값 `paste`
-- 명령어 모드에서 `:reg` 는 현재 등록(regist)된 모든 clipboard 값을 확인할 수 있음
+- 명령어 모드에서 `:reg` 는 현재 등록(register)된 모든 clipboard 값을 확인할 수 있음
 
-### command / search mode에서 붙여넣기 하고 싶을 때
+### command / search mode 에서 붙여넣기 하고 싶을 때
 
 ctrl + r 다음에 클립보드 종류를 선택할 수 있는데,   
 아래와 같은 상태가 된다.
@@ -44,10 +44,10 @@ ctrl + r 다음에 클립보드 종류를 선택할 수 있는데,
 
 다음과 같이 클립보드를 선택할 수 있다.
 
+- `+` : **핵** **중요**. command mode 나 search mode 에서 외부(ctrl + c)에서 복사한 내용을 붙힐 때 사용
 - `0` ~ `9` : 대표적으로 `0` 을 사용하며 최근에 yank 했던 내용(vim)
 - `"` : 이전 yank 했던 내용 - 이건 정확하지 않을 수 있음
 - `:` or `/` : 방금 command or search에서 사용했던 내용
-- `+` : **핵** **중요**. command mode 나 search mode 에서 외부(ctrl + c)에서 복사한 내용을 붙힐 때 사용
 
 ### 이건 예전에 참고용으로 남기는 내용
 - visual mode 에서 복사(y)한 내용을 search mode(/) 에서 사용하는 방법은 ctrl + r + 0 를 하면 된다.
@@ -55,7 +55,7 @@ ctrl + r 다음에 클립보드 종류를 선택할 수 있는데,
 - 기타 자세한 내용은 :help c_CTRL-R 로 알 수 있다.
   + 출처 : <http://seorenn.blogspot.kr/2011/04/vim.html?m=1>
 
-## 만약에 binary로 파일을 보고 싶으면
+## 만약에 binary 로 파일을 보고 싶으면
 
 ```vim
 :%!xxd
@@ -122,7 +122,6 @@ set fileencoings
 :%s/^M//g
 :%s/{ctrl+v}{ctrl+m}//g
 ```
-
 
 ## PO **매크로** WER
 
