@@ -1,5 +1,4 @@
 ---
-permalink: /wiki/스터디/
 comment: false
 ---
 # [oltp olap](oltp-olap.md)
