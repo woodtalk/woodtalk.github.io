@@ -39,7 +39,7 @@
 - variant: co or contra or bi
 - in-(non-) : not variant
 - invariant 용어는 컴퓨터 사이언스에서 겁나 좋아하는 용어이다.
-  + https://en.wikipedia.org/wiki/Invariant#Computer%20science
+  + https://en.wikipedia.org/wiki/Invariant#Computer_science
 
 ## 참고
 
