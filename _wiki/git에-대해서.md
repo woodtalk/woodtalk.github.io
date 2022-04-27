@@ -96,7 +96,7 @@ git config --global alias.df difftool
 
 ### vimdiff 단축키
 
-[vim에 대해서](vim에-대해서.md) 의 vimdiff 단축키 참고
+[vimdiff 단축키](vim에-대해서.md#vimdiff%20단축키) 참고
 
 ## git-svn
 
