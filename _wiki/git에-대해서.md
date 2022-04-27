@@ -94,10 +94,6 @@ git config --global alias.s "status -s"
 git config --global alias.df difftool
 ```
 
-### vimdiff 단축키
-
-[vimdiff 단축키](vim에-대해서.md#vimdiff-단축키) 참고
-
 ## git-svn
 
 git-svn 은 svn 을 쓰는 프로젝트에 꿈과 같은 명령어라고 할 수 있다.   
@@ -277,6 +273,10 @@ git config --global diff.tool vimdiff
 git config --global difftool.prompt false
 ```
 
+#### vimdiff 단축키
+
+[vimdiff 단축키](vim에-대해서.md#vimdiff-단축키) 참고
+
 ### merge conflict with vim
 
 ```bash
@@ -301,7 +301,7 @@ git mergetool
 
 ## git flow config 관련
 
-`git flow` 를 쓰면 flow branch를 쉽게 관리할 수 있다.
+`git flow` 를 쓰면 git flow branch 를 쉽게 관리할 수 있다.
 
 git flow 의 최신 버전은 `1.12.3 (AVH Edition)` 이다(2020년 3월경)   
 해당 버전은 `finish` 에서 merge 하는 방식이 변경되었는데,   
