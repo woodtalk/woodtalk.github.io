@@ -88,8 +88,10 @@
   - 여기서 invariant 는 The C++ Programming Language, Effective C++ 에서 설명하는 용어로 봐야 한다.
     + <https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science>
   - invariant: 유효한 상태를 규정하는 조건 혹은 그 조건을 점검하는 코드
-+ 히스토리 제약조건; 상위에서 정의 불가한 히스토리(ex> method call history 등)가 하위에서 정의 되어선 안 된다.
-  - History constraint (the "history rule")...
++ History constraint (the "history rule")...
+  - 히스토리 제약조건: 상위에서 정의 불가한 히스토리(ex> method call history 등)가 하위에서 정의 되어선 안 된다.
+    + 상위 상태를 변경하려면, 상위 히스토리를 사용해야 한다.
+    + 상태 변경은 객체 자신의 메소드로만 변경하여야 한다.
   - 다양한 해석들이 있고(mutable, immutable 등) 다른 예시도 있었으나, 이 정도로 정의하는 것이 맞다고 생각함
 
 ## 참고
