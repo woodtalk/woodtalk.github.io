@@ -12,14 +12,14 @@
 
 ## 변성이란?
 
-- SuperType ◁- ExtendsType 관계가 있다고 가정
+- `SuperType` ◁- `ExtendsType` 관계가 있다고 가정
 - 이 두 type 의 **파생 타입** (generic, functor 등등) 들의 관계에 대한 정의
 
 ## 공변성
 
 | 기본 관계                | 파생 관계                                                            |
 |--------------------------|----------------------------------------------------------------------|
-| SuperType ◁- ExtendsType | Immutable.List<SuperType> ◁- Immutable.List<ExtendsType>             |
+| SuperType ◁- ExtendsType | `Immutable.List<SuperType>` ◁- `Immutable.List<ExtendsType>`             |
 | SuperType ◁- ExtendsType | `(): SuperType => SuperType()` -▷ `(): ExtendsType => ExtendsType()` |
 
 - 기본 관계와 파생 관계가 같은 방향일 경우
@@ -41,12 +41,12 @@
 - variant: co or contra or bi
 - in-(non-) : not variant
 - invariant 용어는 컴퓨터 사이언스에서 겁나 좋아하는 용어이다.
-  + https://en.wikipedia.org/wiki/Invariant#Computer_science
+  + <https://en.wikipedia.org/wiki/Invariant#Computer_science>
 
 ## 참고
 
-- https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)
-- https://edykim.com/ko/post/what-is-coercion-and-anticommunism/#g--animal---animal%EB%A1%9C-%EA%B0%80%EC%A0%95%ED%95%98%EB%A9%B4-fg%EB%8A%94-%ED%83%80%EC%9E%85-%EC%95%88%EC%A0%84%ED%95%9C%EA%B0%80
+- <https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)>
+- <https://edykim.com/ko/post/what-is-coercion-and-anticommunism/#g--animal---animal%EB%A1%9C-%EA%B0%80%EC%A0%95%ED%95%98%EB%A9%B4-fg%EB%8A%94-%ED%83%80%EC%9E%85-%EC%95%88%EC%A0%84%ED%95%9C%EA%B0%80>
 
 # Liskov Substitution Principle
 
@@ -62,7 +62,7 @@
 - 하위 개체는 상위 개체의 계약 사항을 항상 충족해야 한다.
 - 줄이자면 "상위 개체를 하위 개체로 치환하더라도, 동작에 문제가 없어야 한다."
 
-## 이 원칙을 만족한다면 다음과 같은 현상이 생긴다.
+## 이 원칙의 효과로 다음과 같은 현상이 생긴다.
 
 주어는 모두 하위 타입
 
@@ -86,7 +86,7 @@
 + 상위가 지킨 (상위 상태의) 불변식(불변속성)은 하위가 지켜줘야함
   - Invariants must be preserved in the subtype.
   - 여기서 invariant 는 The C++ Programming Language, Effective C++ 에서 설명하는 용어로 봐야 한다.
-    + https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science
+    + <https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science>
   - invariant: 유효한 상태를 규정하는 조건 혹은 그 조건을 점검하는 코드
 + 히스토리 제약조건; 상위에서 정의 불가한 히스토리(ex> method call history 등)가 하위에서 정의 되어선 안 된다.
   - History constraint (the "history rule")...
@@ -94,7 +94,7 @@
 
 ## 참고
 
-- https://en.wikipedia.org/wiki/Liskov_substitution_principle
-- https://pizzasheepsdev.tistory.com/9
-- https://m.blog.naver.com/salinokl/221053934445
-- https://banaba.tistory.com/34
+- <https://en.wikipedia.org/wiki/Liskov_substitution_principle>
+- <https://pizzasheepsdev.tistory.com/9>
+- <https://m.blog.naver.com/salinokl/221053934445>
+- <https://banaba.tistory.com/34>
