@@ -37,7 +37,7 @@
 
 ## bivariant (& variant) & invariant
 
-- bi- : SuperType ◁- ExtendsType, then I<SuperType> ≡ I<ExtendsType>
+- bi- : SuperType ◁- ExtendsType, then `I<SuperType> ≡ I<ExtendsType>`
 - variant: co or contra or bi
 - in-(non-) : not variant
 - invariant 용어는 컴퓨터 사이언스에서 겁나 좋아하는 용어이다.
