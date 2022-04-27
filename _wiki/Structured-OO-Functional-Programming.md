@@ -1,3 +1,5 @@
+---
+---
 # Structured & OO & Functional Programming
 
 - 구조화(or procedural) 프로그래밍만 사용하더라도 기본만 잘 지켰다면 이는 매우 좋은 코드일 경우가 많다.
