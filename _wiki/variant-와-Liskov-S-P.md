@@ -1,0 +1,3 @@
+# variant
+
+# Liskov Substitution Principle
