@@ -20,7 +20,7 @@
 | 기본 관계                | 파생 관계                                                            |
 |--------------------------|----------------------------------------------------------------------|
 | SuperType ◁- ExtendsType | `Immutable.List<SuperType>` ◁- `Immutable.List<ExtendsType>`             |
-| SuperType ◁- ExtendsType | `(): SuperType => SuperType()` -▷ `(): ExtendsType => ExtendsType()` |
+| SuperType ◁- ExtendsType | `(): SuperType => SuperType()` ◁- `(): ExtendsType => ExtendsType()` |
 
 - 기본 관계와 파생 관계가 같은 방향일 경우
 - 일반적으로 `+` 기호; C#, typescript 에서는 `out` 로 표현
