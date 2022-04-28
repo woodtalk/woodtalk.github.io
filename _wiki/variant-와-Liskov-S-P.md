@@ -68,7 +68,7 @@
 
 ### 메소드(특히 시그니처)
 
-+ **파라메터** 는 **반공변성** 이다.
++ **parameter 타입** 는 **반공변성** 이다.
   - Contravariance of method parameter types in the subtype.
 + **return 타입** 은 **공변성** 이다.
   - Covariance of method return types in the subtype.
