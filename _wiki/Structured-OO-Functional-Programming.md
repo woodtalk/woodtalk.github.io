@@ -9,7 +9,7 @@
 - 프로시저(함수/메소드) 간의 의미 수준(Level)만 잘 맞추기만 해도 가독성이 매우 향상된다.
   + 한 context 에서 기술되는 코드는 동일한 의미 수준으로 표현 되어야 한다.
     * 켄드백의 구현 패턴의 "대칭성(symmetry) 파트의 통일성"
-- 잘 구현된 구조화(or procedural) 프로그래밍은 __**tree 구조로 sub-routine 들이 배치 되며, 각 node 들의 의미 수준(level)은 동일하다.**__
+- 잘 구현된 구조화(or procedural) 프로그래밍은 _**`tree 구조로 sub-routine 들이 배치 되며, 각 node 들의 의미 수준(level)은 동일하다.`**_
 
 ## OO
 
