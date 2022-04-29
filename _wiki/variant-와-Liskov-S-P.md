@@ -83,11 +83,15 @@
 + 후속 조건 약화 안됌
   - Postconditions cannot be weakened in the subtype.
   - 로직 실행 후 결과 값 validation : 후속 조건
-+ 상위가 지킨 (상위 상태의) 불변식(불변속성)은 하위가 지켜줘야함
++ 상위가 지킨 (상위 상태의) 불변량은 하위가 지켜줘야함
   - Invariants must be preserved in the subtype.
-  - 여기서 invariant 는 The C++ Programming Language, Effective C++ 에서 설명하는 용어로 봐야 한다.
-    + <https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science>
-  - invariant: 유효한 상태를 규정하는 조건 혹은 그 조건을 점검하는 코드
+  - Invariant
+    + 불변량
+      * <https://ko.wikipedia.org/wiki/%EB%B6%88%EB%B3%80%EB%9F%89>
+    + 불변식(불변속성) : 유효한 상태를 규정하는 조건 혹은 그 조건을 점검하는 코드
+      * 여기서 invariant 는 The C++ Programming Language, Effective C++ 에서 설명하는 용어로 봐야 한다.
+        - <https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science>
+  
 + History constraint (the "history rule")...
   - 히스토리 제약조건: 상위에서 정의 불가한 히스토리(ex> method call history 등)가 하위에서 정의 되어선 안 된다.
     + 상위 상태를 변경하려면, 상위 히스토리를 사용해야 한다.
