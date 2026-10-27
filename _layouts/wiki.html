@@ -2,14 +2,14 @@
 layout: default
 ---
 
-{% assign thisName = page.id | remove: '/wiki/' %}
-<input type="hidden" id="thisName" value="{{ thisName }}"/>
-<div class="post">
-    <article class="post-content">
-        {{ content }}
-    </article>
-</div>
-
+<nav class="breadcrumbs" aria-label="현재 위치">
+  <a href="{{ '/' | relative_url }}">홈</a>
+  <span aria-hidden="true">/</span>
+  <a href="{{ '/wiki/' | relative_url }}">글 목록</a>
+</nav>
+<article class="post-content">
+  {{ content }}
+</article>
 {% if page.comment != false %}
-    {% include comments.html %}
-{% endif%}
+  {% include comments.html %}
+{% endif %}
